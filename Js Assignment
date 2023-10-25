@@ -1,0 +1,128 @@
+// Problem 1: Write a function to calculate the area of a triangle.
+function calculateTriangle(base, height) {
+    return (base * height) / 2;
+  }
+  let triangleArea = calculateTriangle(5, 8);
+// console.log(triangleArea);
+
+
+ //Problem 2: Write a function to convert degrees to radians.
+ function degreeToRadian(degree) {
+    return degree * (Math.PI / 180);
+  }
+  let radians = degreeToRadian(90);
+//   console.log(radians);
+
+
+
+
+//Problem 3: Create a function calculateFactorial that takes a number and returns its factorial.
+ function calFactorial(number) {
+    if (number == 0 || number < 0) {
+      return 1;
+    } return number * calFactorial(number - 1);
+  }
+
+  let factorial = calFactorial(5);
+//   console.log(factorial);
+
+
+
+//Problem 4: Create a function isPrime that takes a number as a parameter and returns true if it's a prime number, and false otherwise.
+    function isPrime(num) {
+        if (num <= 1) {
+          return false;
+        }
+        for (let x = 2; x * x <= num; x++) {
+          if (num % x === 0) {
+            return false;
+          }
+        } return true;
+      }
+      let result = isPrime(5);
+    //   console.log(result);
+
+
+      
+
+//Problem 5: Create a function mergeArrays that takes two arrays as parameters and returns a new array that merges both arrays.
+  let lang1 = ["Javascript ", "Php"];
+  let lang2 = ["Python", "Java"];
+  function mergeArrays(array1, array2) {
+    return array1.concat(array2);
+  }
+  let newArray = mergeArrays(lang1,lang2);
+//   console.log(newArray);
+
+
+
+//Problem 6: Create a function isLeapYear that takes a year as a parameter and returns "This is a leap year" if it's a leap year, and "Not Leap year" otherwise.
+  function isLeapYear(year) {
+    return year % 4 == 0 ? "This is a leap year" : "Not leap year";
+  }
+  let leapYear = isLeapYear(2023);
+//   console.log(leapYear);
+
+
+//Problem 7: Create a function removeDuplicates that takes an array and returns a new array with duplicates removed.
+  let flowers = ["Rose", "Sunflower", "lotus", "Rose", "Water-lily"];
+  function removeDuplicates(flower) {
+    return [new Set(flower)];
+  }
+  let newAray = removeDuplicates(flowers);
+//   console.log(newAray);
+
+
+
+  //Problem 8: Create a function convertToCelsius that takes a temperature in Fahrenheit and returns the equivalent temperature in Celsius.
+  let temperature = 70;
+  function convertToCelsius(temp) {
+    return ((temp - 32) * 5) / 9;
+  }
+  let Celsius = convertToCelsius(temperature);
+//   console.log(Celsius);
+
+
+  //Problem 9: Write a function to find the maximum of five numbers.
+  let numbers = [10, 8, 40, 65];
+  function findMaxNumber(num) {
+    return Math.max(...numbers);
+  }
+  let maximumNumber = findMaxNumber(numbers);
+//   console.log(maximumNumber);
+
+
+  //Problem 10: Create a function called evenOdd() that takes a string as a parameter. Now you have to give the output based on the total number of characters in your String. The output will be 'even' or 'odd'. [ Input: ‘JavaScript’ Output: even, Input: ‘Hello’ Output: odd]
+  let input1 = "Javascript";
+  let input2 = "Hello";
+  function evenOdd(para){
+    for (let x = 1; x <= para.length; x++) {
+      return para.length % 2 == 0 ? "even" : "odd";
+    }
+  }
+  let output1 = evenOdd(input1);
+  let output2 = evenOdd(input2);
+//   console.log(output1);
+//   console.log(output2);
+
+
+
+
+//1. Explain the difference between 'if...else' and 'switch' statements for conditional logic.
+//Ans:  The fundamental difference between if-else and switch statements is that the if-else statement “selects the execution of the statements based upon the evaluation of the expression in if statements”. The switch statements “selects the execution of the statement often according to a keyboard command”.
+
+//2. What is JavaScript, and what is its primary purpose in web development?
+//Ans: JavaScript is a scripting or programming language that allows you to implement complex features on web pages.It is a lightweight programming language commonly used by web developers to add dynamic interactions to web pages, applications, servers, and even games.
+//JavaScript's primary purpose in web development is to make web pages more interactive, responsive, and functional. It enables developers to create a wide range of features and user experiences, and it plays a central role in modern web applications, websites, and web-based software.
+
+//3. Explain the difference between var, let, and const when declaring variables in JavaScript.
+// Ans:In Javascript, var is function-scoped and often leads to unexpected behavior due to hoisting and lack of block scope, making it less suitable for modern JavaScript development. On the other hand, let and const are block-scoped, provide better variable isolation, and help prevent accidental reassignment, with let allowing reassignment and const used for values that should not change after assignment. Choose let or const over var for more predictable and robust code.
+
+
+//4. Explain the concept of "scope" in JavaScript and the difference between global and local scope.
+// Scope in JavaScript refers to the current context of code, which determines the accessibility of variables to JavaScript. The two types of scope are local and global: Global variables are those declared outside of a block. Local variables are those declared inside of a block.
+
+
+//5. What is the difference between "null" and "undefined" in JavaScript?
+// "Undefined" - typically represents the absence of a value due to uninitialized variables, missing function arguments, or non-existent object properties, and is often automatically assigned by JavaScript.
+// "null" - represents the intentional absence of a value and is explicitly assigned by the programmer.
